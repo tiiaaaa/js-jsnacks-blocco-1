@@ -4,17 +4,22 @@ L'utente inserisce due parole in successione, con due prompt.
 Il software stampa prima la parola più corta, poi la parola più lunga.
  */
 
-let firstWord = prompt("inserisci la prima parola");
+//TODO Variabile che contiene la prima parola
+let firstWord = prompt("Inserisci la prima parola");
 console.log(firstWord);
 
-let secondWord = prompt("inserisci la seconda parola");
+//TODO Variabile che contiene la seconda parola
+let secondWord = prompt("Inserisci la seconda parola");
 console.log(secondWord);
 
+//! Se la l'unghezza e l'identità delle due parole è uguale 
 if (firstWord.length === secondWord.length){
     console.log("La lunghezza delle parole è uguale");
-} else if (firstWord.length > secondWord.length) {
-    console.log(secondWord, firstWord);
-} else if (secondWord.length > firstWord.length) {
-    console.log(firstWord, secondWord);
+    //! Se la lunghezza prima è >= della seconda 
+} else if (firstWord.length >= secondWord.length) { 
+    console.log(secondWord + " " + firstWord);
+    //! Altrimenti
+} else {
+    console.log(firstWord + " " + secondWord);
 }
 
